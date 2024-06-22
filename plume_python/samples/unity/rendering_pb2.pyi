@@ -38,6 +38,7 @@ class TransparencySortMode(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
     TRANSPARENCY_SORT_MODE_PERSPECTIVE: _ClassVar[TransparencySortMode]
     TRANSPARENCY_SORT_MODE_ORTHOGRAPHIC: _ClassVar[TransparencySortMode]
     TRANSPARENCY_SORT_MODE_CUSTOM_AXIS: _ClassVar[TransparencySortMode]
+
 SHADOW_CASTING_MODE_OFF: ShadowCastingMode
 SHADOW_CASTING_MODE_ON: ShadowCastingMode
 SHADOW_CASTING_MODE_TWO_SIDED: ShadowCastingMode

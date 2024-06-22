@@ -4,7 +4,12 @@ from common import color_pb2 as _color_pb2
 from google.protobuf.internal import enum_type_wrapper as _enum_type_wrapper
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
-from typing import ClassVar as _ClassVar, Mapping as _Mapping, Optional as _Optional, Union as _Union
+from typing import (
+    ClassVar as _ClassVar,
+    Mapping as _Mapping,
+    Optional as _Optional,
+    Union as _Union,
+)
 
 DESCRIPTOR: _descriptor.FileDescriptor
 
@@ -27,9 +32,16 @@ class ReflectionProbeRefreshMode(int, metaclass=_enum_type_wrapper.EnumTypeWrapp
 
 class ReflectionProbeTimeSlicingMode(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
     __slots__ = []
-    REFLECTION_PROBE_TIME_SLICING_MODE_ALL_FACES_AT_ONCE: _ClassVar[ReflectionProbeTimeSlicingMode]
-    REFLECTION_PROBE_TIME_SLICING_MODE_INDIVIDUAL_FACES: _ClassVar[ReflectionProbeTimeSlicingMode]
-    REFLECTION_PROBE_TIME_SLICING_MODE_NO_TIME_SLICING: _ClassVar[ReflectionProbeTimeSlicingMode]
+    REFLECTION_PROBE_TIME_SLICING_MODE_ALL_FACES_AT_ONCE: _ClassVar[
+        ReflectionProbeTimeSlicingMode
+    ]
+    REFLECTION_PROBE_TIME_SLICING_MODE_INDIVIDUAL_FACES: _ClassVar[
+        ReflectionProbeTimeSlicingMode
+    ]
+    REFLECTION_PROBE_TIME_SLICING_MODE_NO_TIME_SLICING: _ClassVar[
+        ReflectionProbeTimeSlicingMode
+    ]
+
 REFLECTION_PROBE_MODE_BAKED: ReflectionProbeMode
 REFLECTION_PROBE_MODE_CUSTOM: ReflectionProbeMode
 REFLECTION_PROBE_MODE_REALTIME: ReflectionProbeMode
@@ -46,16 +58,44 @@ class ReflectionProbeCreate(_message.Message):
     __slots__ = ["id"]
     ID_FIELD_NUMBER: _ClassVar[int]
     id: _identifiers_pb2.ComponentIdentifier
-    def __init__(self, id: _Optional[_Union[_identifiers_pb2.ComponentIdentifier, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        id: _Optional[_Union[_identifiers_pb2.ComponentIdentifier, _Mapping]] = ...,
+    ) -> None: ...
 
 class ReflectionProbeDestroy(_message.Message):
     __slots__ = ["id"]
     ID_FIELD_NUMBER: _ClassVar[int]
     id: _identifiers_pb2.ComponentIdentifier
-    def __init__(self, id: _Optional[_Union[_identifiers_pb2.ComponentIdentifier, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        id: _Optional[_Union[_identifiers_pb2.ComponentIdentifier, _Mapping]] = ...,
+    ) -> None: ...
 
 class ReflectionProbeUpdate(_message.Message):
-    __slots__ = ["id", "enabled", "mode", "refresh_mode", "time_slicing_mode", "clear_flags", "importance", "intensity", "near_clip_plane", "far_clip_plane", "render_dynamic_objects", "box_projection", "blend_distance", "bounds", "resolution", "hdr", "shadow_distance", "background_color", "culling_mask", "custom_baked_texture_id", "baked_texture_id"]
+    __slots__ = [
+        "id",
+        "enabled",
+        "mode",
+        "refresh_mode",
+        "time_slicing_mode",
+        "clear_flags",
+        "importance",
+        "intensity",
+        "near_clip_plane",
+        "far_clip_plane",
+        "render_dynamic_objects",
+        "box_projection",
+        "blend_distance",
+        "bounds",
+        "resolution",
+        "hdr",
+        "shadow_distance",
+        "background_color",
+        "culling_mask",
+        "custom_baked_texture_id",
+        "baked_texture_id",
+    ]
     ID_FIELD_NUMBER: _ClassVar[int]
     ENABLED_FIELD_NUMBER: _ClassVar[int]
     MODE_FIELD_NUMBER: _ClassVar[int]
@@ -98,4 +138,31 @@ class ReflectionProbeUpdate(_message.Message):
     culling_mask: int
     custom_baked_texture_id: _identifiers_pb2.AssetIdentifier
     baked_texture_id: _identifiers_pb2.AssetIdentifier
-    def __init__(self, id: _Optional[_Union[_identifiers_pb2.ComponentIdentifier, _Mapping]] = ..., enabled: bool = ..., mode: _Optional[_Union[ReflectionProbeMode, str]] = ..., refresh_mode: _Optional[_Union[ReflectionProbeRefreshMode, str]] = ..., time_slicing_mode: _Optional[_Union[ReflectionProbeTimeSlicingMode, str]] = ..., clear_flags: _Optional[_Union[ReflectionProbeClearFlags, str]] = ..., importance: _Optional[int] = ..., intensity: _Optional[float] = ..., near_clip_plane: _Optional[float] = ..., far_clip_plane: _Optional[float] = ..., render_dynamic_objects: bool = ..., box_projection: bool = ..., blend_distance: _Optional[float] = ..., bounds: _Optional[_Union[_bounds_pb2.Bounds, _Mapping]] = ..., resolution: _Optional[int] = ..., hdr: bool = ..., shadow_distance: _Optional[float] = ..., background_color: _Optional[_Union[_color_pb2.Color, _Mapping]] = ..., culling_mask: _Optional[int] = ..., custom_baked_texture_id: _Optional[_Union[_identifiers_pb2.AssetIdentifier, _Mapping]] = ..., baked_texture_id: _Optional[_Union[_identifiers_pb2.AssetIdentifier, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        id: _Optional[_Union[_identifiers_pb2.ComponentIdentifier, _Mapping]] = ...,
+        enabled: bool = ...,
+        mode: _Optional[_Union[ReflectionProbeMode, str]] = ...,
+        refresh_mode: _Optional[_Union[ReflectionProbeRefreshMode, str]] = ...,
+        time_slicing_mode: _Optional[_Union[ReflectionProbeTimeSlicingMode, str]] = ...,
+        clear_flags: _Optional[_Union[ReflectionProbeClearFlags, str]] = ...,
+        importance: _Optional[int] = ...,
+        intensity: _Optional[float] = ...,
+        near_clip_plane: _Optional[float] = ...,
+        far_clip_plane: _Optional[float] = ...,
+        render_dynamic_objects: bool = ...,
+        box_projection: bool = ...,
+        blend_distance: _Optional[float] = ...,
+        bounds: _Optional[_Union[_bounds_pb2.Bounds, _Mapping]] = ...,
+        resolution: _Optional[int] = ...,
+        hdr: bool = ...,
+        shadow_distance: _Optional[float] = ...,
+        background_color: _Optional[_Union[_color_pb2.Color, _Mapping]] = ...,
+        culling_mask: _Optional[int] = ...,
+        custom_baked_texture_id: _Optional[
+            _Union[_identifiers_pb2.AssetIdentifier, _Mapping]
+        ] = ...,
+        baked_texture_id: _Optional[
+            _Union[_identifiers_pb2.AssetIdentifier, _Mapping]
+        ] = ...,
+    ) -> None: ...

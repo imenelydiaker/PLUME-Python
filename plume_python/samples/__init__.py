@@ -7,7 +7,7 @@ from google.protobuf import descriptor_pool as _descriptor_pool
 from google.protobuf.message_factory import GetMessageClass
 from google.protobuf.message import Message
 
-T = TypeVar('T', bound=Message)
+T = TypeVar("T", bound=Message)
 
 
 def build_descriptor_pool(root_folder):
@@ -31,17 +31,19 @@ def sample_types_from_names(names: list[str]) -> set[Type[T]]:
     for name in names:
         descriptor = None
 
-        derivatives = [name,
-                       f"plume.{name}",
-                       f"plume.sample.{name}",
-                       f"plume.sample.{name}",
-                       f"plume.sample.lsl.{name}",
-                       f"plume.sample.unity.{name}",
-                       f"plume.sample.unity.settings.{name}",
-                       f"plume.sample.unity.urp.{name}",
-                       f"plume.sample.unity.xritk.{name}",
-                       f"plume.sample.unity.ui.{name}",
-                       f"plume.sample.common.{name}"]
+        derivatives = [
+            name,
+            f"plume.{name}",
+            f"plume.sample.{name}",
+            f"plume.sample.{name}",
+            f"plume.sample.lsl.{name}",
+            f"plume.sample.unity.{name}",
+            f"plume.sample.unity.settings.{name}",
+            f"plume.sample.unity.urp.{name}",
+            f"plume.sample.unity.xritk.{name}",
+            f"plume.sample.unity.ui.{name}",
+            f"plume.sample.common.{name}",
+        ]
 
         for derivative in derivatives:
             try:

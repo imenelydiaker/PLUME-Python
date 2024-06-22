@@ -6,7 +6,13 @@ from google.protobuf.internal import containers as _containers
 from google.protobuf.internal import enum_type_wrapper as _enum_type_wrapper
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
-from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Mapping, Optional as _Optional, Union as _Union
+from typing import (
+    ClassVar as _ClassVar,
+    Iterable as _Iterable,
+    Mapping as _Mapping,
+    Optional as _Optional,
+    Union as _Union,
+)
 
 DESCRIPTOR: _descriptor.FileDescriptor
 
@@ -44,6 +50,7 @@ class LightShadows(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
     LIGHT_SHADOWS_NONE: _ClassVar[LightShadows]
     LIGHT_SHADOWS_HARD: _ClassVar[LightShadows]
     LIGHT_SHADOWS_SOFT: _ClassVar[LightShadows]
+
 LIGHT_TYPE_SPOT: LightType
 LIGHT_TYPE_DIRECTIONAL: LightType
 LIGHT_TYPE_POINT: LightType
@@ -69,16 +76,54 @@ class LightCreate(_message.Message):
     __slots__ = ["id"]
     ID_FIELD_NUMBER: _ClassVar[int]
     id: _identifiers_pb2.ComponentIdentifier
-    def __init__(self, id: _Optional[_Union[_identifiers_pb2.ComponentIdentifier, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        id: _Optional[_Union[_identifiers_pb2.ComponentIdentifier, _Mapping]] = ...,
+    ) -> None: ...
 
 class LightDestroy(_message.Message):
     __slots__ = ["id"]
     ID_FIELD_NUMBER: _ClassVar[int]
     id: _identifiers_pb2.ComponentIdentifier
-    def __init__(self, id: _Optional[_Union[_identifiers_pb2.ComponentIdentifier, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        id: _Optional[_Union[_identifiers_pb2.ComponentIdentifier, _Mapping]] = ...,
+    ) -> None: ...
 
 class LightUpdate(_message.Message):
-    __slots__ = ["id", "enabled", "type", "shape", "intensity", "bounce_intensity", "range", "color", "color_temperature", "use_color_temperature", "spot_angle", "inner_spot_angle", "shadows", "shadow_strength", "shadow_resolution", "shadow_matrix_override", "use_shadow_matrix_override", "shadow_bias", "shadow_normal_bias", "shadow_near_plane", "use_view_frustum_for_shadow_caster_cull", "layer_shadow_cull_distances", "shadow_custom_resolution", "light_shadow_caster_mode", "rendering_layer_mask", "culling_mask", "bounding_sphere_override", "use_bounding_sphere_override", "cookie_id", "cookie_size", "flare_id"]
+    __slots__ = [
+        "id",
+        "enabled",
+        "type",
+        "shape",
+        "intensity",
+        "bounce_intensity",
+        "range",
+        "color",
+        "color_temperature",
+        "use_color_temperature",
+        "spot_angle",
+        "inner_spot_angle",
+        "shadows",
+        "shadow_strength",
+        "shadow_resolution",
+        "shadow_matrix_override",
+        "use_shadow_matrix_override",
+        "shadow_bias",
+        "shadow_normal_bias",
+        "shadow_near_plane",
+        "use_view_frustum_for_shadow_caster_cull",
+        "layer_shadow_cull_distances",
+        "shadow_custom_resolution",
+        "light_shadow_caster_mode",
+        "rendering_layer_mask",
+        "culling_mask",
+        "bounding_sphere_override",
+        "use_bounding_sphere_override",
+        "cookie_id",
+        "cookie_size",
+        "flare_id",
+    ]
     ID_FIELD_NUMBER: _ClassVar[int]
     ENABLED_FIELD_NUMBER: _ClassVar[int]
     TYPE_FIELD_NUMBER: _ClassVar[int]
@@ -141,7 +186,46 @@ class LightUpdate(_message.Message):
     cookie_id: _identifiers_pb2.AssetIdentifier
     cookie_size: float
     flare_id: _identifiers_pb2.AssetIdentifier
-    def __init__(self, id: _Optional[_Union[_identifiers_pb2.ComponentIdentifier, _Mapping]] = ..., enabled: bool = ..., type: _Optional[_Union[LightType, str]] = ..., shape: _Optional[_Union[LightShape, str]] = ..., intensity: _Optional[float] = ..., bounce_intensity: _Optional[float] = ..., range: _Optional[float] = ..., color: _Optional[_Union[_color_pb2.Color, _Mapping]] = ..., color_temperature: _Optional[float] = ..., use_color_temperature: bool = ..., spot_angle: _Optional[float] = ..., inner_spot_angle: _Optional[float] = ..., shadows: _Optional[_Union[LightShadows, str]] = ..., shadow_strength: _Optional[float] = ..., shadow_resolution: _Optional[_Union[LightShadowResolution, str]] = ..., shadow_matrix_override: _Optional[_Union[_matrix4x4_pb2.Matrix4x4, _Mapping]] = ..., use_shadow_matrix_override: bool = ..., shadow_bias: _Optional[float] = ..., shadow_normal_bias: _Optional[float] = ..., shadow_near_plane: _Optional[float] = ..., use_view_frustum_for_shadow_caster_cull: bool = ..., layer_shadow_cull_distances: _Optional[_Union[LayerShadowCullDistances, _Mapping]] = ..., shadow_custom_resolution: _Optional[int] = ..., light_shadow_caster_mode: _Optional[_Union[LightShadowCasterMode, str]] = ..., rendering_layer_mask: _Optional[int] = ..., culling_mask: _Optional[int] = ..., bounding_sphere_override: _Optional[_Union[_vector4_pb2.Vector4, _Mapping]] = ..., use_bounding_sphere_override: bool = ..., cookie_id: _Optional[_Union[_identifiers_pb2.AssetIdentifier, _Mapping]] = ..., cookie_size: _Optional[float] = ..., flare_id: _Optional[_Union[_identifiers_pb2.AssetIdentifier, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        id: _Optional[_Union[_identifiers_pb2.ComponentIdentifier, _Mapping]] = ...,
+        enabled: bool = ...,
+        type: _Optional[_Union[LightType, str]] = ...,
+        shape: _Optional[_Union[LightShape, str]] = ...,
+        intensity: _Optional[float] = ...,
+        bounce_intensity: _Optional[float] = ...,
+        range: _Optional[float] = ...,
+        color: _Optional[_Union[_color_pb2.Color, _Mapping]] = ...,
+        color_temperature: _Optional[float] = ...,
+        use_color_temperature: bool = ...,
+        spot_angle: _Optional[float] = ...,
+        inner_spot_angle: _Optional[float] = ...,
+        shadows: _Optional[_Union[LightShadows, str]] = ...,
+        shadow_strength: _Optional[float] = ...,
+        shadow_resolution: _Optional[_Union[LightShadowResolution, str]] = ...,
+        shadow_matrix_override: _Optional[
+            _Union[_matrix4x4_pb2.Matrix4x4, _Mapping]
+        ] = ...,
+        use_shadow_matrix_override: bool = ...,
+        shadow_bias: _Optional[float] = ...,
+        shadow_normal_bias: _Optional[float] = ...,
+        shadow_near_plane: _Optional[float] = ...,
+        use_view_frustum_for_shadow_caster_cull: bool = ...,
+        layer_shadow_cull_distances: _Optional[
+            _Union[LayerShadowCullDistances, _Mapping]
+        ] = ...,
+        shadow_custom_resolution: _Optional[int] = ...,
+        light_shadow_caster_mode: _Optional[_Union[LightShadowCasterMode, str]] = ...,
+        rendering_layer_mask: _Optional[int] = ...,
+        culling_mask: _Optional[int] = ...,
+        bounding_sphere_override: _Optional[
+            _Union[_vector4_pb2.Vector4, _Mapping]
+        ] = ...,
+        use_bounding_sphere_override: bool = ...,
+        cookie_id: _Optional[_Union[_identifiers_pb2.AssetIdentifier, _Mapping]] = ...,
+        cookie_size: _Optional[float] = ...,
+        flare_id: _Optional[_Union[_identifiers_pb2.AssetIdentifier, _Mapping]] = ...,
+    ) -> None: ...
 
 class LayerShadowCullDistances(_message.Message):
     __slots__ = ["distances"]

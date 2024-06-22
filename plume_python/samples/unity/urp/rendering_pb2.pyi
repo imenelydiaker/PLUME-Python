@@ -15,6 +15,7 @@ class AntialiasingQuality(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
     ANTIALIASING_QUALITY_LOW: _ClassVar[AntialiasingQuality]
     ANTIALIASING_QUALITY_MEDIUM: _ClassVar[AntialiasingQuality]
     ANTIALIASING_QUALITY_HIGH: _ClassVar[AntialiasingQuality]
+
 ANTIALIASING_MODE_NONE: AntialiasingMode
 ANTIALIASING_MODE_FAST_APPROXIMATE_ANTIALIASING: AntialiasingMode
 ANTIALIASING_MODE_SUBPIXEL_MORPHOLOGICAL_ANTI_ALIASING: AntialiasingMode

@@ -14,6 +14,7 @@ class SpeakerMode(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
     SPEAKER_MODE_SURROUND_5POINT1: _ClassVar[SpeakerMode]
     SPEAKER_MODE_SURROUND_7POINT1: _ClassVar[SpeakerMode]
     SPEAKER_MODE_PROLOGIC: _ClassVar[SpeakerMode]
+
 SPEAKER_MODE_MONO: SpeakerMode
 SPEAKER_MODE_STEREO: SpeakerMode
 SPEAKER_MODE_QUAD: SpeakerMode
@@ -28,4 +29,8 @@ class AudioSettingsUpdate(_message.Message):
     SPATIALIZER_PLUGIN_NAME_FIELD_NUMBER: _ClassVar[int]
     speakerMode: SpeakerMode
     spatializer_plugin_name: str
-    def __init__(self, speakerMode: _Optional[_Union[SpeakerMode, str]] = ..., spatializer_plugin_name: _Optional[str] = ...) -> None: ...
+    def __init__(
+        self,
+        speakerMode: _Optional[_Union[SpeakerMode, str]] = ...,
+        spatializer_plugin_name: _Optional[str] = ...,
+    ) -> None: ...
